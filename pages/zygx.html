@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>三调资源服务共享平台</title>
+    <link rel="stylesheet" href="css/welcome.css">
+    <link rel="stylesheet" href="css/zygx.css">
+    <link rel="stylesheet" href="css/jquery.treeview.css">
+    <link rel="stylesheet" type="text/css" href="css/jquery.sPage.css">
+    <link href="js/arcgis/arcgis_js_v327_api/arcgis_js_api/library/3.27/3.27/dijit/themes/tundra/tundra.css" rel="stylesheet">
+    <link href="js/arcgis/arcgis_js_v327_api/arcgis_js_api/library/3.27/3.27/esri/css/esri.css" rel="stylesheet">
+    <script src="js/echarts.min.js"></script>
+    <script src="js/arcgis/arcgis_js_v327_api/arcgis_js_api/library/3.27/3.27/init.js" type="text/javascript"></script>
+    <script type="text/javascript" src="js/arcgis/arcgis.js"></script>
+    <script type="text/javascript" src="js/arcgis/arcgis_report.js"></script>
+    <script type="text/javascript" src="js/arcgis/arcgis_image.js"></script>
+    <script type="text/javascript" src="js/arcgis/arcgis_print.js"></script>
+    <script type="text/javascript" src="js/arcgis/arcgis_geometry.js"></script>
+    <script type="text/javascript" src="js/arcgis/ChangeVersionClass.js"></script>
+</head>
+<body>
+    <div id="top">
+        <div class="logo"></div>
+        <div class="text"></div>
+        <div id="login">
+            <div id="img-usernow"></div>
+            <div id="inf-namenow">
+                <div id="inf-namenow-name"></div>
+                <div id="inf-namenow-time"></div>
+            </div>
+        </div>
+        <!-- <div id="help" title="帮助"></div> -->
+        <div id="setting" title="大屏展示"></div>
+        <div id="gb" title="退出登录"></div>
+        <div id="dh">
+            <div class="dh one">首&nbsp;&nbsp;&nbsp;&nbsp;页</div>
+            <div class="dh two">资源共享</div>
+            <div class="dh three">专项调查</div>
+            <div class="dh four">统计分析</div>
+            <div class="dh five">文档共享</div>
+        </div>
+    </div>
+        <div class="dh-bottom two2">
+            <div class="middle"><div class="middle-s"><input class="ser-c fone" type="text" placeholder="搜索菜单..."/><input class="ser-b sone" type="button"></div></div><div class="middle1"><div>地理信息</div></div>
+            <div class="caidan done"><div class="gd"><div class="gd-n wone"></div></div><div class="caidan1 qone filetree treeview-famfamfam" id="browser">
+            </div>
+            </div>
+            <div id="quanbu123" style="display:inline-block;width:1518px;height:93.6%;position: absolute;right:0.1%;bottom: 0;">
+                <!-- 操作图标 -->
+                <div class="xgj">
+                    <div class="map_12" title="放大"></div>
+                    <div class="map_14" title="缩小"></div>
+                    <div class="map_20" title="地图全屏显示"></div>
+                    <div class="map_24" title="鹰眼图"></div>
+                    <div class="map_26" title="指北针"></div>
+                    <div class="map_28" title="比例尺"></div>
+                    <div class="map_30" title="查看地理信息"></div>
+                    <div class="map_07" title="影像"></div>
+                    <div id="isbb" class="map_33" title="显示统计报表"></div>
+                    <div id="isnbb" class="map_3_" title="显示统计报表"></div>
+                    <div class="map_09" title="所有地类报表"></div>
+                    <div class="map_35" title="选中地类报表"></div>
+                    <div class="map_36" title="打印地图"></div>
+                    <div class="map_37" title="绘制地块"></div>
+                    <div id="isshow" class="map_40" title="权属查询"></div>
+                    <div id="isnshow" class="map_41" title="权属查询"></div>
+                    <div id="isshow1" class="map_42" title="圈地类"></div>
+                    <div id="isnshow1" class="map_43" title="圈地类"></div>
+                    <!-- <div class="map_38" title='地类面积筛选'></div> -->
+                </div>
+                <div id="buttomone" style="width: 300px;height: 40px;background: #ffffff;position: absolute;left:42% ;top:70px;z-index: 200;border-radius: 4px;">
+                    <form style="margin-left: 20px;" action="#" method="post">
+                     
+                        <input type="radio" name="sex" value="亩" checked="true" />亩
+                        <input  style="margin-left: 20px;" type="radio" name="sex" value="平方米" />平方米
+                        <input  style="margin-left: 20px;" type="radio" name="sex" value="公顷" />公顷
+                        <input  type="button" id="getSexBtn" value="确定" style="height: 40px;background: #04C4DB;width: 60px;margin-left: 31px;color: #FFFFFF;" />
+                    </form>
+                </div>
+                <div id="search" style="position: absolute;left:60% ;top: 100px;z-index: 200;">
+                    <input id="inputs" type="text" style="height: 30px;" placeholder="权属单位搜索" >
+                    <button id="suresearch" style="background: #04C4DB;color: #FFFFFF;height: 30px;width: 40px;">搜索</button>
+                </div>
+                <div id="searchmain" style="width: 1065px;height: 372px;position: absolute;left:25% ;top: 200px;z-index: 200;">
+                    <div style="width: 1054px;background: #bcd6ee;height: 34px;color: #114C7F;padding: 5px;display: flex;justify-content: space-between;align-items: center;">
+                        搜索结果
+                        <div id="instable" style="font-size: 24px;">×</div>
+                    </div>
+                    <div style="background: #FFFFFF;height: 100%;">
+                        <!-- <table id="tab1" style="width: 100%;
+                        text-align: center;
+                        border-spacing: 0;
+                        border-collapse: unset;
+                        background: #FFFFFF;
+                        border-top: #fff 1px solid !important;
+                        "> -->
+                            <!-- <thead >
+                                <tr style="height: 40px;"> -->
+                                <div style="background: #bcd6ee;display: flex;justify-content: center;align-items: center;">
+                                    <div style="width: 132px;height: 40px;color: #333;margin-left: 10px;">项目编号</div>
+                                    <div style="width: 132px;height: 40px;color: #333;">标识码</div>
+                                    <div style="width: 132px;height: 40px;color: #333;">要素代码</div>
+                                    <div style="width: 132px;height: 40px;color: #333;">地类编码</div>
+                                    <div style="width: 132px;height: 40px;color: #333;margin-left: 20px;">权属单位代码</div>
+                                    <div style="width: 132px;height: 40px;color: #333;">权属单位名称</div>
+                                    <div style="width: 132px;height: 40px;color: #333;">图斑面积(㎡) </div>
+                                    <div style="width: 132px;height: 40px;color: #333;">城镇村属性码</div>
+                                </div>
+                                <!-- </tr>
+                            </thead>
+                            <tbody>
+                            </tbody> -->
+                        <!-- </table> -->
+                        <div style="height: 345px;overflow-y: scroll;background: #FFFFFF;">
+                        <table id="tab"  class="apply-table" >
+                            <thead>
+                                <!-- <tr style="height: 40px;">
+                                    <td style="width: 120px;height: 40px;color: #333;">项目编号</td>
+                                    <td style="width: 140px;height: 40px;color: #333;">标识码</td>
+                                    <td style="width: 130px;height: 40px;color: #333;">要素代码</td>
+                                    <td style="width: 130px;height: 40px;color: #333;">地类编码</td>
+                                    <td style="width: 160px;height: 40px;color: #333;">权属单位代码</td>
+                                    <td style="width: 160px;height: 40px;color: #333;">权属单位名称</td>
+                                    <td style="width: 100px;height: 40px;color: #333;">图斑面积(㎡) </td>
+                                    <td style="width: 100px;height: 40px;color: #333;">城镇村属性码</td>
+                                </tr>-->
+                            </thead>
+                            <tbody  class="tbody">
+                            </tbody>
+                        </table>
+                    </div>
+                    </div>
+                </div>
+                <!-- baioges -->
+                <div id="searchmain1" style="width: 1065px;height: 372px;position: absolute;left:28% ;top: 200px;z-index: 200;">
+                    <div style="width: 1054px;background: #bcd6ee;height: 34px;color: #114C7F;padding: 5px;display: flex;justify-content: space-between;align-items: center;">
+                        搜索结果
+                        <div id="instable1" style="font-size: 24px;">×</div>
+                    </div>
+                    <div style="background: #FFFFFF;height: 100%;">
+                        <!-- <table id="tab1" style="width: 100%;
+                        text-align: center;
+                        border-spacing: 0;
+                        border-collapse: unset;
+                        background: #FFFFFF;
+                        border-top: #fff 1px solid !important;
+                        "> -->
+                            <!-- <thead >
+                                <tr style="height: 40px;"> -->
+                                <div style="background: #bcd6ee;display: flex;justify-content: center;align-items: center;">
+                                    <div style="width: 132px;height: 40px;color: #333;margin-left: 10px;">项目编号</div>
+                                    <div style="width: 132px;height: 40px;color: #333;">标识码</div>
+                                    <div style="width: 132px;height: 40px;color: #333;">要素代码</div>
+                                    <div style="width: 132px;height: 40px;color: #333;">地类编码</div>
+                                    <div style="width: 132px;height: 40px;color: #333;margin-left: 20px;">权属单位代码</div>
+                                    <div style="width: 132px;height: 40px;color: #333;">权属单位名称</div>
+                                    <div style="width: 132px;height: 40px;color: #333;">图斑面积(㎡) </div>
+                                    <div style="width: 132px;height: 40px;color: #333;">城镇村属性码</div>
+                                </div>
+                                <!-- </tr>
+                            </thead>
+                            <tbody>
+                            </tbody> -->
+                        <!-- </table> -->
+                        <div style="height: 345px;overflow-y: scroll;background: #FFFFFF;">
+                        <table id="tab1"  class="apply-table" >
+                            <thead>
+                                <!-- <tr style="height: 40px;">
+                                    <td style="width: 120px;height: 40px;color: #333;">项目编号</td>
+                                    <td style="width: 140px;height: 40px;color: #333;">标识码</td>
+                                    <td style="width: 130px;height: 40px;color: #333;">要素代码</td>
+                                    <td style="width: 130px;height: 40px;color: #333;">地类编码</td>
+                                    <td style="width: 160px;height: 40px;color: #333;">权属单位代码</td>
+                                    <td style="width: 160px;height: 40px;color: #333;">权属单位名称</td>
+                                    <td style="width: 100px;height: 40px;color: #333;">图斑面积(㎡) </td>
+                                    <td style="width: 100px;height: 40px;color: #333;">城镇村属性码</td>
+                                </tr>-->
+                            </thead>
+                            <tbody  class="tbody">
+                            </tbody>
+                        </table>
+                    </div>
+                    </div>
+                </div>
+                <!-- 日期选择 -->
+                <div class="select-time">
+                    <div class="fg11">▼</div>
+                    <div class="time-text">&nbsp;</div>
+                    <div class="filetree treeview-famfamfam cc2" style="width:200px;background-color: white;z-index:9999;overflow-y: auto;position: relative;top:39px;display: none;padding-bottom: 20px;">
+                    </div>
+                </div>
+                <!-- 地区选择 -->
+                <div class="select-background">
+                <div class="fg1">▼</div>
+                <div class="xz">&nbsp;集贤县</div>
+                <div class="filetree treeview-famfamfam cc1" style="width: 250px;height:450px;background-color: white;z-index:9999;overflow-y: auto;position: relative;top:39px;display: none;">
+                </div>
+                </div>
+                <!-- 地区信息弹出框 -->
+                <div class="information1 theone">
+                    <div id="gb-p1">X</div>
+                    <div class="glb">
+                    <div class="tilte2 mone"></div>
+                    <div class="nr lone"></div>
+                    </div>
+                </div>
+                <!-- 柱形图，饼形图 -->
+                <div class="bing"><input id="gb-bing" type="button" value="X"><div id="bing" style="width: 570px;height:300px;"></div></div>
+                <div class="zhu"><input id="gb-zhu" type="button" value="X"><div id="zhu" style="width: 570px;height:300px;"></div></div>
+                <div class="quanbu-bing"><input id="gb-quanbu-bing" type="button" value="X"><div id="quanbu-bing" style="width: 850px;height:300px;"></div></div>
+                <div class="quanbu-zhu"><input id="gb-quanbu-zhu" type="button" value="X"><div id="quanbu-zhu" style="width: 850px;height:300px;"></div></div>
+                <!-- 指南针 -->
+                <div class="south"></div>
+                <!-- 比例尺 -->
+                <div class="bili-ruler" id="sca"></div>
+                <!-- 鹰眼图 -->
+                <div class="yingyan"><div style="width:94%;height:93.3%;background-color: white;z-index: 10000;margin-top: 2%;margin-left: 3%;"><div id="xx"></div></div></div>
+                <!-- 显示影像 -->
+                <div id="left-yingxiang"></div><div id="map_div" class="xianshi jone"></div>
+                <!-- 打印地图 -->
+                <div id="dayin-map" style='display:none;width:322px;height:340px;position: absolute;background: white;top:200px;left: 400px;border-radius: 5px;overflow: hidden;z-index: 9999;'>
+                  <div style="height:56px;font-size:22px;color:rgba(255,255,255,1);padding-left:22px;background:linear-gradient(to right,#03b8f8,#1ae3b1);line-height: 56px;font-family:SourceHanSansCN-Regular;font-weight: 400;">打印地图</div>
+                  <span style="position: absolute;top:98px;left:20px;">地图标题</span><input id="ditubiaoti" style='width:190px;height:36px;position: absolute;top:88px;left:110px;border:1px black dashed;font-size: 18px;color:#333333;outline: none;' type="text" placeholder="请输入地图标题">
+                  <span style="position: absolute;top:162px;left:20px;">布局</span><select name="bj" id="buju" style="width:190px;height:36px;position: absolute;top:152px;left:110px;border:1px #E4E7ED solid;font-size: 18px;color:#333333;outline: none;">
+                  <option value="A4 Portrait">A4 Portrait</option>
+                  <option value="Tabloid ANSI B Portrait">Tabloid ANSI B Portrait</option>
+                  </select>
+                  <span style="position: absolute;top:219px;left:20px;">格式</span><select name="gs" id="geshi" style="width:190px;height:36px;position: absolute;top:208px;left:110px;border:1px #E4E7ED solid;font-size: 18px;color:#333333;outline: none;">
+                  <option value="pdf">pdf</option>
+                  </select>
+                  <div id="quxiao321" style="display: inline-block;width: 70px;height: 34px;border: 1px #d3d6db solid;color: #5AAFFA;font-size: 16px;text-align: center;line-height: 34px;position:absolute;top:273px;left:124px;border-radius:10px;;">取消</div>
+                  <div id="dayin" style="display: inline-block;width: 70px;height: 34px;border: 1px #5aaffa solid;background:#5aaffa;color: #FFFFFF;font-size: 16px;text-align: center;line-height: 34px;position:absolute;top:273px;left:230px;border-radius:10px;;">打印</div>
+                </div>
+                <!-- 绘制地块 -->
+                <div id='huizhi' style='display:none;background-color: #04c4db;width:30px;height:185px;position: absolute;left:0.5%;top:15%;border-radius:30px;z-index: 9998;'>
+                <img id='bj' src="img/编辑.png" alt="" style='height:19px;width:18px;position: absolute;left:6px;top:14.8px' title='编辑地块' /><img id='yc' src="img/移除图像.png" alt="" style='height:19px;width:18px;position: absolute;left:6px;top:48.6px' title='移除地块' /><img id='sf' src="img/缩放地块.png" alt="" title='缩放地块' style='height:19px;width:18px;position: absolute;left:6px;top:82.4px'><img id='xz123' src="img/旋转地块.png" alt="" title='旋转地块' style='height:19px;width:18px;position: absolute;left:6px;top:116.2px'>
+                <img id='jlcl' src="img/测量.png" alt="" style='height:19px;width:18px;position: absolute;left:6px;top:150px' title='距离测量'/>
+                </div>
+                <!-- 面积筛选 -->
+                <!-- <div id='mianjishaixuan' style=''></div> -->
+                </div>       
+                </div>
+                <div id="bottom">© 2020 版权所有 黑龙江文图测绘地理信息责任公司</div>
+                </body>
+                <script src="js/jquery-1.7.1.min.js"></script>
+                <script src="js/jquery.treeview.js"></script>
+                <script type="text/javascript" src="js/jquery.sPage.js"></script>
+                <script src="js/config.js"></script>
+                <script src="js/main.js"></script>
+                <script src="js/zygx.js"></script>
+</body>
+</html>
