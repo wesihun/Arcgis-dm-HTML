@@ -1,0 +1,233 @@
+.dh{
+    background: transparent;
+}
+/* .zhezhao{
+    background: #000;
+    opacity: 0.5;
+    width: 1920px;
+    height: 1080px;
+    position: relative;
+    top: 0px;
+    left: 0px;
+} */
+.four{
+    background: #01b6e2;
+}
+.xz1{
+        display: inline-block;
+        width: 250px;
+        height: 30px;
+        font-size: large;
+        color: #000;
+        border: 2px #9fdfed solid;
+        background:  #cfe1ef;
+        z-index: 10001;
+        outline: none;
+        margin-top: 3%;
+}
+.xz2{
+    display: inline-block;
+    width: 250px;
+    height: 30px;
+    font-size: large;
+    color: #000;
+    border: 2px #9fdfed solid;
+    background:  #cfe1ef;
+    z-index: 10001;
+    outline: none;
+    margin-top: 3%;
+}
+.caidan1{
+    background-color: white;
+}
+#duibi1{
+    background: url(../img/2020-05-11140538.png);
+    background-size: 100% 100%;
+    display: inline-block;
+    height: 90%;
+    width: 40%;
+    border: 1px #000 solid;
+    margin-left: 10%;
+    margin-top: 2%;
+    background-color: white;
+}
+#duibi2{
+    background: url(../img/2020-05-11140618.png);
+    background-size: 100% 100%;
+    display: inline-block;
+    height: 90%;
+    width: 40%;
+    border: 1px #000 solid;
+    border-left: 0;
+    margin-left: 0;
+    margin-top: 2%;
+    background-color: white;
+}
+.select-background{
+    display: inline-block;
+    z-index:10000;
+    background-color: white;
+    position: absolute;
+    width: 250px;
+    height: 37px;
+    right:3%;
+    top:1.5%;
+}
+table{
+    border-collapse:collapse;
+}
+#dcsj{
+    width:112px;
+    height:42px;
+    background:rgba(54,153,255,1);
+    border-radius:4px;
+    line-height: 42px;
+    text-align: center;
+    color: #FFFFFF;
+    position: absolute;
+    left:50px;
+    top:79px;
+    cursor: pointer;
+}
+#hzbg{
+    width:112px;
+    height:42px;
+    background:rgba(54,153,255,1);
+    border-radius:4px;
+    line-height: 42px;
+    text-align: center;
+    color: #FFFFFF;
+    position: absolute;
+    left:200px;
+    top:79px;
+    cursor: pointer;
+}
+#leibie{
+    height: 40px;
+    width: 98px; 
+    border:1px solid rgba(185,217,244,1);
+    border-radius:4px;
+    color: #999999;
+    font-size: 14px;
+    position: absolute;
+    left: 922px;
+    top:79px;
+    outline:none;
+    cursor: pointer;
+}
+#shuru{
+    width:226px;
+    height:40px;
+    border:1px solid rgba(185,217,244,1);
+    border-radius:4px;
+    font-size:16px;
+    font-family:Source Han Sans CN;
+    font-weight:400;
+    color:#999999;
+    outline: none;
+    position: absolute;
+    top:79px;
+    left: 1034px;
+}
+#cx{
+    width:76px;
+    height:40px;
+    background:rgba(54,153,255,1);
+    border-radius:4px;
+    line-height: 40px;
+    text-align: center;
+    color: #FFFFFF;
+    position: absolute;
+    left: 1277px;
+    top:79px;
+    cursor: pointer;
+}
+/* #gjcx{
+    width:98px;
+    height:40px;
+    background:rgba(54,153,255,1);
+    border-radius:4px;
+    line-height: 40px;
+    text-align: center;
+    color: #FFFFFF;
+    position: absolute;
+    left:1255px;
+    top:79px;
+    cursor: pointer;
+} */
+#tj{
+    width:1302px;
+    border:1px solid rgba(185,217,244,1);
+    border-radius:8px;
+    text-align:center;
+}
+#tj thead tr{
+    border:1px solid rgba(185,217,244,1);
+    height: 50px;
+}
+#tj thead tr th{
+    border:1px solid rgba(185,217,244,1);
+    border-left:0; 
+    border-right:0;
+}
+#tj tbody tr td{
+    border:1px solid rgba(185,217,244,1);
+    border-left:0; 
+    border-right:0;
+    text-align: center;
+    width:20px;
+}
+#tj tbody tr td div{
+    display: inline-block;
+    width:150px;    
+    overflow: hidden;    
+    text-overflow:ellipsis;    
+    white-space:nowrap;
+}
+#tj tbody tr{
+    border:1px solid rgba(185,217,244,1);
+    height: 50px;
+}
+.checked{
+    border: 1px #B9D9F4 solid;
+    background-color: white;
+}
+.select-time{
+    display: inline-block;
+    z-index:10000;
+    background-color: white;
+    position: absolute;
+    width: 200px;
+    height: 37px;
+    right:2.5%;
+    top:1.5%;
+}
+.time-text1{
+    display: inline-block;
+    width: 198px;
+    height: 35px;
+    font-size:larger;
+    color: #9d9d9d;
+    border: 2px #9fdfed solid;
+    background: transparent;
+    position: absolute;
+    z-index: 10001;
+    outline: none;
+    line-height: 35px;
+    text-align: left; 
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.fg11{
+    display: inline-block;
+    width: 30px;
+    height: 37px;
+    background: #06c0e9;
+    position: absolute;
+    right: -30px;
+    z-index: 10000;
+    line-height: 37px;
+    text-align: center;
+    color: #9d9d9d;
+}

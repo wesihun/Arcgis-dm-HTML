@@ -1,0 +1,206 @@
+*{
+    padding:0;
+    margin:0;
+    border: 0;
+}
+html{
+    font-size:0.052083333333333336vw;
+}
+body {
+    font-family : Helvetica, Arial, Sans-Serif;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    background: url(../img/login_bg_02.png) no-repeat;
+    background-size:1920rem 1080rem;
+    overflow-y: hidden;
+    height:1080rem;
+    width:1920rem;
+}
+.name{
+    display: inline-block;
+    height: 59rem;
+    width: 440rem;
+    background: url(../img/login__03.png) no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    top:370rem;
+    left:790rem;
+    line-height: 59rem;
+}
+.zh{
+    display: inline-block;
+    color: #333333;
+    font-size:30rem;
+    position: absolute;
+    top:370rem;
+    left:690rem;
+    height:59rem;
+    line-height: 59rem;
+}
+#name{
+    height: 40rem;
+    width: 347rem;
+    margin-top: 4rem;
+    margin-left: 73rem;
+    outline: none;
+    line-height: 53rem;
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: 20rem;
+    background: transparent;
+}
+.mm{
+    display: inline-block;
+    color: #333333;
+    font-size:30rem;
+    position: absolute;
+    top:470rem;
+    left:690rem;
+    height:59rem;
+    line-height: 59rem;
+}
+.value{
+    display: inline-block;
+    height: 60rem;
+    width: 440rem;
+    line-height: 60rem;
+    background: url(../img/login__09.png) no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    top:470rem;
+    left:790rem;
+}
+#value{
+    height: 40rem;
+    width: 347rem;
+    margin-top: 4rem;
+    margin-left: 73rem;
+    outline: none;
+    line-height: 53rem;
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: 20rem;
+    background: transparent;
+}
+#input{
+    display: inline-block;
+    width:350rem;
+    height:43rem;
+    background: url(../img/login__14.png) no-repeat;
+    background-size: 350rem 45rem;
+    position: absolute;
+    top:570rem;
+    left:783.5rem;
+    outline: none;
+    cursor: pointer;
+}
+.body{
+    display: inline-block;
+    height:1vw;
+    width: 1vw;
+}
+.text{
+    display: inline-block;
+    width: 447rem;
+    height:50rem;
+    background: url("../img/home__08.png") no-repeat;
+    background-size: 447rem 50rem;
+    position: absolute;
+    top:20rem;
+    left:80rem;
+}
+.logo{
+    display: inline-block;
+    width: 60rem;
+    height: 50rem;
+    background: url("../img/home__07.png") no-repeat;
+    background-size: 60rem 50rem;
+    position: absolute;
+    top:20rem;
+    left:20rem;
+}
+#buttom{
+    display: inline-block;
+    width: 370rem;
+    position: absolute;
+    bottom: 50rem;
+    left:775rem;
+    color: white;
+    font-size: 16rem;
+}
+#zc{
+    display: inline-block;
+    position: absolute;
+    top:620rem;
+    left:925rem;
+    color: blue;
+    text-decoration:underline;
+    cursor: pointer;
+    font-size: 16rem;
+}
+#dl1{
+    display: inline-block;
+}
+#zh1,#zh2,#mm1,#mm2,#bm1,#bm,#gw,#gw1,#js,#js1,#tj,#cz,#xb1,#xb,#xm1,#xm2,#phone1,#phone2{
+    display: inline-block;
+    font-size:23rem;
+    outline: none;
+    margin-bottom: 10rem;
+}
+#zc1{
+    display: none;
+    font-size: larger;
+    color: #333333;
+    position: absolute;
+    top:350rem;
+    left:750rem;
+    position: relative;
+    top:370rem;
+}
+#tj{
+    margin-left: 60rem;
+    margin-top: 80rem;
+}
+#cz{
+    margin-left: 100rem;
+    margin-top: 80rem;
+}
+#tj,#cz{
+    width:80rem;
+    border-radius: 80rem;
+    background: #10c1b4;
+    color:white;
+    cursor: pointer;
+}
+#zh2,#mm2,#bm1,#gw1,#js1,#xm2,#xb1,#phone2{
+   border: 1px #d8d6d6 solid;
+}
+.fh{
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border: 15rem solid transparent;
+    border-right-color: #10c1b4;
+    border-left:0;
+}
+.fhdl{
+    display: inline-block;
+    height:30rem;
+    width: 100rem;
+    line-height: 25rem;
+    position: absolute;
+    top:-60rem;
+    left:-125rem;
+    cursor: pointer;
+}
+.fh-text{
+    display: inline-block;
+    height: 30rem;
+    color:#333333;
+    vertical-align:top;
+    line-height: 30rem;
+    text-decoration:underline;
+    font-size:20rem;
+}
